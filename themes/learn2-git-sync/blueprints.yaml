@@ -1,6 +1,6 @@
 name: Learn2 Git Sync
-version: 1.0.9
-description: "A customized version of the Learn2 theme for use with the Learn2 with Git Sync skeleton package."
+version: 1.2.3
+description: "A customized version of the Learn2 theme for use with the Learn2 with Git Sync skeleton package. Includes selectable visual styles."
 icon: git
 author:
  name: Hibbitts Design
@@ -62,8 +62,31 @@ form:
 
     siteandpageoptions:
       type: section
-      title: 'Learn2 Theme Options'
+      title: 'Learn 2 Theme Options'
       underline: true
+
+    hide_site_title:
+        type: toggle
+        label: 'Hide Site Title'
+        highlight: 1
+        default: 0
+        options:
+            1: 'Yes'
+            0: 'No'
+        validate:
+            type: bool
+
+    style:
+      type: select
+      size: medium
+      label: Style
+      description: Custom style selection.
+      default: default
+      options:
+        default: Default
+        hoth: Hoth
+        longyearbyen: Longyearbyen
+        spitsbergen: Spitsbergen (Hoth v2)
 
     top_level_version:
         type: toggle

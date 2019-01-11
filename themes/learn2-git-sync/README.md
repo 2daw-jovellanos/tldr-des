@@ -1,6 +1,6 @@
 # Learn2 with Git Sync
 
-Learn2 with Git Sync is a customized version of the default [Grav Learn](http://learn.getgrav.org) theme. Simple, fast and modern.
+Learn2 with Git Sync is a customized version of the default [Grav Learn](http://learn.getgrav.org) theme. Includes selectable visual styles.
 
 Want to quickly try out this theme? The [Learn2 with Git Sync Skeleton](https://getgrav.org/downloads/skeletons) is a ready-to-run site with the Learn2 with Git Sync Theme, which also includes the Admin Panel and example content already installed.
 
@@ -52,6 +52,10 @@ Manually updating Learn2 with Git Sync is pretty simple. Here is what you will n
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
+
+### Recompile CSS from SCSS
+
+To recompile default style using a Sass-compiler, run it on /scss/theme.scss and output to /css-compiled/theme.css, like `node-sass --watch --source-map true scss/theme.scss css-compiled/theme.css`. To do the same for custom styles, run it on /scss/custom and output to /css-compiled/custom, like `node-sass --watch --source-map true scss/custom/ css-compiled/custom`.
 
 ## Features
 

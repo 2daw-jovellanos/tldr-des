@@ -1,3 +1,36 @@
+# v1.2.3
+## 11/23/2018
+
+1. [](#new)
+    * Added custom styles 'Spitsbergen' and 'Longyearbyen' (thanks @olevik)
+
+# v1.2.2
+## 10/17/2018
+
+1. [](#improved)
+    * Updated ReadMe, theme description and screenshots
+
+# v1.2.1
+## 10/16/2018
+
+1. [](#bugfix)
+    * Restored CSS styling for display of site title
+
+# v1.2.0
+## 10/16/2018
+
+1. [](#new)
+    * Added custom styles (thanks @olevik)
+    * Added option to show or hide site title
+1. [](#bugfix)
+    * Fixed issue with default taxonomy categories
+
+# v1.1.0
+## 08/25/2018
+
+1. [](#improved)
+    * Initial multi-language support for Advanced Full-text Search
+
 # v1.0.9
 ## 08/23/2018
 

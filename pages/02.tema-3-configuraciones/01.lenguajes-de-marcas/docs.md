@@ -18,7 +18,7 @@ Se basa en:
 * **elementos**: contenidos estructurales, encerrados entre **etiquetas** de apertura y cierre. Un elemento puede contener otros elementos. 
 * **atributos**: son valores asociados a un elemento.
 
->> Se suele utilizar en algunas configuraciones. Ej, el servidor de apliaccions **Apache Tomcat**, o el gestor de dependencias **maven** usan XML para sus configuraciones.
+>>> Se suele utilizar en algunas configuraciones. Ej, el servidor de apliaccions **Apache Tomcat**, o el gestor de dependencias **maven** usan XML para sus configuraciones.
 
 Ej: un fragmento de la configuración de **tomcat**
 ```xml

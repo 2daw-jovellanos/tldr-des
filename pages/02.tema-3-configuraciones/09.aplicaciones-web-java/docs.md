@@ -11,8 +11,8 @@ visible: true
 Una aplicación web en java es una unidad bien definida que consta de varios scripts en Java, junto con cualquier otro contenido habitual de la web (html, css, js, multimedia, bases de datos, etc)
 
 Hay varias tecnologías de scripts, pero las más utilizadas son los Servlets y las JSP. Estas tecnologías forman parte de Java Enterprise Edition, que está implementado en los propios servidores de aplicaciones Java.
-
-* **Servlets**: Un servlet es una clase en el lenguaje de programación Java, que se instala en un servidor de aplicaciones preparado para este tipo de clases, y que puede responder a cualquier tipo de solicitudes http. Típicamente, el servlet genera contenido de manera dinámica (como un programa en PHP o en ASP.NET). Es una tecnología antigua pero potente, ya que desde un servlet puede utilizarse la mayor parte de capacidades de Java, y también las capacidades que ofrezca el servidor en el que se aloja.
+### servlets
+Un servlet es una clase en el lenguaje de programación Java, que se instala en un servidor de aplicaciones preparado para este tipo de clases, y que puede responder a cualquier tipo de solicitudes http. Típicamente, el servlet genera contenido de manera dinámica (como un programa en PHP o en ASP.NET). Es una tecnología antigua pero potente, ya que desde un servlet puede utilizarse la mayor parte de capacidades de Java, y también las capacidades que ofrezca el servidor en el que se aloja.
 No es habitual ver aplicaciones completas compuestas de servlets, ya que los JSP son más sencillos de utilizar y de más alto nivel.  La palabra servlet deriva de otra anterior, applet, que se refiere a pequeños programas que se ejecutan en el contexto de un navegador web.
 
 Un servlet extiende a la clase `javax.servlet.HttpServlet` (de Java EE), y su funcionalidad básica se expresa haciendo overriding de una serie de método que pueden manejar una petición http con un detrminado método http:
@@ -56,7 +56,8 @@ public class HelloWorld extends HttpServlet {
 }
 ```
 
-* **JSP**: La tecnología de Java Server Pages está basada en combinar lenguajes de marcas con fragmentos en Java, al estilo de PHP o de ASP.NET. Además, permite crear clases que proporcionan marcas nuevas para el lenguaje de JSP.
+### JSP
+La tecnología de Java Server Pages está basada en combinar lenguajes de marcas con fragmentos en Java, al estilo de PHP o de ASP.NET. Además, permite crear clases que proporcionan marcas nuevas para el lenguaje de JSP.
 
 Los bloques Java se delimitan con <% %>, el bloque <%= %> envia hacia la salida.
 Se dispone de dos objetos: request y response, con la misma funcionalidad que en el servlet.

@@ -1,7 +1,8 @@
 ---
 title: 'Entorno de java y Máquinas virtuales de proceso.'
 taxonomy:
-    category: docs
+    category:
+        - docs
 visible: true
 ---
 
@@ -16,8 +17,8 @@ Las aplicaciones web para java se enmarcan dentro de **Java EE: Enterprise Editi
 Las aplicaciones web de java tienen una estructura estándar, y los entornos de desarrollo como NetBeans o Eclipse suelen tener incorporado el Java EE, y son capaces de generar, ejecutar y depurar proyectos de Java Web. NetBeans está preparado para interoperar con el servidor GlassFish.
 
 Los principales servidores son:
-* [Apache Tomcat](http://tomcat.apache.org/) También conocido como **Catalina**. Uno de los preferidos para el desarrollo, de la fundación Apache. Escrito en java, a diferencia del servidor Apache, escrito en C.
-* [Oracle GlassFish](https://javaee.github.io/glassfish) Otro de los preferidos para el desarrollo. Open Source, esponsorizado por Oracle.
+* [Apache Tomcat](http://tomcat.apache.org/) También conocido como **Catalina**. Uno de los preferidos para el desarrollo, de la fundación  Apache. Escrito en java, a diferencia del servidor Apache, escrito en C.
+* [Oracle GlassFish](https://javaee.github.io/glassfish) Otro de los preferidos para el desarrollo. Open Source, esponsorizado por Oracle. Hay un fork open source llamado [Paraya Server](https://www.payara.fish/software/payara-server/) que va cobrando popularidad desde que Oracle no da soporte comercial a GlassFish.
 * [IBM Websphere](https://www.ibm.com/es-es/marketplace/java-ee-runtime) Uno de los clásicos en entorno empresarial.
 * [Red Hat WildFly](http://wildfly.org/) Otro clásico. Anteriormente conocido como **JBoss**.
 * [Oracle Weblogic Server](https://www.oracle.com/es/middleware/weblogic/) El servidor empresarial de Oracle.

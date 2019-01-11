@@ -151,9 +151,12 @@ exif.encode_unicode = ISO-8859-15
 
 ## JSON
 * Es la abreviatura de **JavaScript Object Notation**, es el formato de serialización estándar de javascript.
-* Hay identificadores asociados a valores. Tanto los valores como los identificadores van entre comillas dobles. Ej: `"nombre" : "arturo"`. 
-* Los valores pueden ser de cualquier tipo, pero:
-
+* En un fichero de JSON, se define un único objeto, entre llaves `{ }`, o un array, entre corchetes `[ ]`, ambos con sus elementos separados por comas.
+* Los objetos pueden tener atributos, que son identificadores asociados a valores. Tanto los valores como los identificadores van entre comillas dobles. Ej: `"nombre" : "arturo"`. 
+* Los valores no tienen tipo definido y siempre van entre comillas, pero
+   * Si el valor es, a su vez un **objeto**, entonces va entre llaves, con sus atributos dentro, igualmente en el formato de identificador y valor. `"mascota" : {"nombre" : "paquito", "edad": 2, "especie" : "periquito"}`
+   * Si el valor es un **array**, entonces va entre corchetes con sus valores separados por comas. Ej: `"aficiones: ["correr", "leer", "ver el GH Dúo sin volumen"]
+* No se admiten comentarios en un fichero JSON
 ```json
 {
     "menu": {

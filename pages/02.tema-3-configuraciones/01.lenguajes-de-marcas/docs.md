@@ -18,8 +18,8 @@ Se basa en:
 * **elementos**: contenidos estructurales, encerrados entre **etiquetas** de apertura y cierre. Un elemento puede contener otros elementos. 
 * **atributos**: son valores asociados a un elemento.
 
->>>> Se suele utilizar en algunas configuraciones. En particular, las relacioandas con el mundo de Java.
->>>  **Apache Tomcat**, o el gestor de dependencias **maven** (del que hablaremos más adelante en el curso) usan XML para sus configuraciones.
+>>>>> Se suele utilizar en algunas configuraciones. En particular, las relacioandas con el mundo de Java.
+>>>>> **Apache Tomcat**, o el gestor de dependencias **maven** (del que hablaremos más adelante en el curso) usan XML para sus configuraciones.
 >>>  También en algunas aplicaciones de Microsoft, como los ficheros de configuración de las aplicaciones de ASP.NET, aunque las herramientas más modernas de Microsoft tienden a utilizar JSON.
 
 Ej: un fragmento de la configuración de **tomcat** (sólo para ver su aspecto)

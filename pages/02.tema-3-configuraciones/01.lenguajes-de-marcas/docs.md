@@ -18,22 +18,19 @@ Se basa en:
 * **elementos**: contenidos estructurales, encerrados entre **etiquetas** de apertura y cierre. Un elemento puede contener otros elementos. 
 * **atributos**: son valores asociados a un elemento.
 
->>> Se suele utilizar en algunas configuraciones. Ej, el servidor de apliaccions **Apache Tomcat**, o el gestor de dependencias **maven** usan XML para sus configuraciones.
+>>>> Se suele utilizar en algunas configuraciones. En particular, las relacioandas con el mundo de Java.
+>>>  **Apache Tomcat**, o el gestor de dependencias **maven** (del que hablaremos más adelante en el curso) usan XML para sus configuraciones.
+>>>  También en algunas aplicaciones de Microsoft, como los ficheros de configuración de las aplicaciones de ASP.NET, aunque las herramientas más modernas de Microsoft tienden a utilizar JSON.
 
-Ej: un fragmento de la configuración de **tomcat**
+Ej: un fragmento de la configuración de **tomcat** (sólo para ver su aspecto)
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
 <Server port="8005" shutdown="SHUTDOWN">
-  <Listener className="org.apache.catalina.core.JasperListener" />
-  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
-  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
-  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
   <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
  
   <GlobalNamingResources>
     <Resource name="UserDatabase" auth="Container"
               type="org.apache.catalina.UserDatabase"
-              description="User database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
               pathname="conf/tomcat-users.xml" />
   </GlobalNamingResources>
@@ -42,36 +39,46 @@ Ej: un fragmento de la configuración de **tomcat**
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
-    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
- 
-    <Engine name="Catalina" defaultHost="localhost">
- 
-      <Realm className="org.apache.catalina.realm.LockOutRealm">
-        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
-               resourceName="UserDatabase"/>
-      </Realm>
- 
-      <Host name="localhost"  appBase="webapps"
-            unpackWARs="true" autoDeploy="true">
-        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-               prefix="localhost_access_log." suffix=".txt"
-               pattern="%h %l %u %t "%r" %s %b" />
-      </Host>
-    </Engine>
-  </Service>
-</Server>
+   <!--- etc, etc -->
+   
+```
+
+Otro ejemplo: Un fragmento de código del descriptor de despliegue de una aplicación ASP.NET
+```xml
+<configuration>
+
+   <!-- Configuration section-handler declaration area. -->
+      <configSections>
+         <section name="section1" type="section1Handler" />
+         <section name="section2" type="section2Handler" />
+      </configSections>
+   <!-- Configuration section settings area. -->
+   
+   <section1>
+      <s1Setting1 attribute1="attr1" />
+   </section1>
+   
+   <section2>
+      <s2Setting1 attribute1="attr1" />
+   </section2>
+   
+   <system.web>
+      <authentication mode="Windows" />
+   </system.web>
+   
+</configuration>
 ```
 
 ## Ficheros de directivas estilo UNIX
 Tradicionalmente utilizados en servicios Unix, y heredados en Linux/Android/MacOS 
 
-* Son ficheros con estructura posicional *
+* Son ficheros con estructura posicional
 * las líneas empiezan por un identificador llamado **directiva** que hace referencia a un determinado aspecto de la configuración. Cada directiva tiene su propio conjunto de valores, que se suele poner en la misma línea, a continuación de la directiva.  (Ej: `DefaultServer on`,  `ServerType standalone`)
 * Habitualmente en sistemas GNU/linux y asimilados, los ficheros de configuración de directivas se guardan en alguna subcarpeta de  `/etc`
 * Hay un caráter para escribir comentarios de una línea, a partir del cual se ignora la línea. Habitualmente es **#**   
 * Los espacios entre la directiva y sus valores suelen ser ignorados. Mucha gente aprovecha esta característica para alinear los valores en columnas.
 
-Este tipo de ficheros se utilizan en **OpenSSH**, **proftpd**, **apache 2** y un larga lista más.
+>>> Este tipo de ficheros se utilizan en **OpenSSH**, **proftpd**, **apache 2** y un larga lista más.
 
 Ej: un fragmento de configuración de __proftpd__
 

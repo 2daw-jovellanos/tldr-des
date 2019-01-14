@@ -186,7 +186,7 @@ YAML es un formato de serialización de datos basado en texto, en los que las in
 * Puede haber comentarios, precedidos de `#`
 * Para indentar se utilizan <span style="color:red">2 o 4 espacios. <strong>Nunca tabs</strong></span>.
 
-
+Ejemplo, para ver el aspecto del código yaml.
 ```yml
 
 nombre: Pepe

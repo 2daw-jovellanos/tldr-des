@@ -187,7 +187,7 @@ YAML es un formato de serialización de datos basado en texto, en los que las in
 * Para indentar se utilizan <span style="color:red">2 o 4 espacios. <strong>Nunca tabs</strong></span>.
 
 
-```yaml
+```yml
 
 nombre: Pepe
 apellidos: Perez López

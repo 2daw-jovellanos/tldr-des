@@ -6,7 +6,7 @@ taxonomy:
 visible: true
 ---
 
-La configuración de servicios relacionados con el despliegue, así como la configuración de otras muchas herramientas de desarrollo suelen hacerse en ficheros de texto cuya estructura está basada en algún **Lenguaje de marcas**.
+La configuración de servicios relacionados con el despliegue, así como la configuración de otras muchas herramientas de desarrollo suelen hacerse en ficheros de texto cuya estructura está basada en algún **Lenguaje de marcas** que sirva para intercambiar información.
 
 Vamos a citar algunos:
 [miniTOC]
@@ -43,7 +43,7 @@ Ej: un fragmento de la configuración de **tomcat** (sólo para ver su aspecto)
    
 ```
 
-Otro ejemplo: Un fragmento de código del descriptor de despliegue de una aplicación ASP.NET
+Otro ejemplo: Un fragmento de código del descriptor de despliegue de una aplicación ASP.NET, igualmente sólo para ver su aspecto.
 ```xml
 <configuration>
 
@@ -100,8 +100,8 @@ Port           21
 Umask          022
 ```
 ### Secciones
-En algunos ficheros de directivas estilo Unix, se utilizan marcas ente ángulos para delimitar secciones. 
-Ej: `<Directory /var/www/ejemplo>` y `</Directory>`. La marca de apertura va en una línea, la de cierre en otra, y las directivas que queden en el interior se ven afectadas por la marca. **OJO: aunque la sintaxis se asemeja a la de los elementos de XML, esto no es XML**
+En algunos ficheros de directivas estilo Unix, se utilizan marcas ente ángulos con una etiqueta para delimitar secciones. 
+Ej: `<Directory /var/www/ejemplo>` y `</Directory>`. La marca de apertura va en una línea, la de cierre en otra. Tienen la misma etiqueta, solo que la marca de cierre la etiqueta va precedida de una barra `/`. Las directivas que queden en el interior se ven afectadas por la marca. **OJO: aunque la sintaxis se asemeja a la de los elementos de XML, esto no es XML**
 
 ```xml
 # A basic anonymous configuration, no upload directories.  If you do not
@@ -128,11 +128,11 @@ Ej: `<Directory /var/www/ejemplo>` y `</Directory>`. La marca de apertura va en 
 </Anonymous>
 ```
 
-## Ficheros de directivas "ini" estilo Windows.
+## Ficheros de parámetros "ini" estilo Windows.
 Tradicionalmente utilizados en las versiones de Windows de los años 90, se siguen usando en algunos contextos sencilos. El fichero  de configuración de **php**, llamado `php.ini` es un ejemplo de este formato.
 
 * Son ficheros con estructura posicional. Suelen tener la extensión **.ini**
-* las líneas empiezan por un identificador llamado **directiva** que hace referencia a un determinado aspecto de la configuración. Cada directiva tiene su propio conjunto de valores, que se suele poner en la misma línea, a continuación de la directiva detrás del signo **=**.  (Ej: `memory_limit = 32M`,  `track_errors = yes`)
+* las líneas empiezan por un identificador llamado **parámetr** que hace referencia a un determinado aspecto de la configuración. Cada parámetro tiene su propio conjunto de valores, que se suele poner en la misma línea, a continuación de la directiva detrás del signo **=**.  (Ej: `memory_limit = 32M`,  `track_errors = yes`)
 * Hay un caráter para escribir comentarios de una línea, a partir del cual se ignora la línea **;**   
 * Puede haber marcas de sección, simplemente el nombre de sección entre corchetes Ej: `[php]`
 
@@ -150,55 +150,56 @@ exif.encode_unicode = ISO-8859-15
 ```
 
 ## JSON
-* Es la abreviatura de **JavaScript Object Notation**, es el formato de serialización estándar de javascript.
+* Es la abreviatura de **JavaScript Object Notation**, es el formato de serialización estándar de javascript, estádar del IETF y de ECMA.
 * En un fichero de JSON, se define un único objeto, entre llaves `{ }`, o un array, entre corchetes `[ ]`, ambos con sus elementos separados por comas.
-* Los objetos pueden tener atributos, que son identificadores asociados a valores. Tanto los valores como los identificadores van entre comillas dobles. Ej: `"nombre" : "arturo"`. 
+* Los objetos pueden tener atributos, que son identificadores asociados a valores. Los identificadores se escriben entre comillas dobles y tambié  los valores de tipo texto, pero no ls numéricos. Ej: `"nombre" : "arturo"` `"annoNacimiento" : 1989"`
 * Los valores no tienen tipo definido y siempre van entre comillas, pero
    * Si el valor es, a su vez un **objeto**, entonces va entre llaves, con sus atributos dentro, igualmente en el formato de identificador y valor. `"mascota" : {"nombre" : "paquito", "edad": 2, "especie" : "periquito"}`
    * Si el valor es un **array**, entonces va entre corchetes con sus valores separados por comas. Ej: `"aficiones: ["correr", "leer", "ver el GH Dúo sin volumen"]
 * No se admiten comentarios en un fichero JSON
+* JSON suele escribirse indentado [estilo k&r](https://en.wikipedia.org/wiki/Indentation_style) cuando puede haber intervención humana, como en los ficheros de configuración. Si no es así, suele escribirse [minificado](https://en.wikipedia.org/wiki/Minification_(programming)).  
+
+
+Ej: Un fichero JSON que define un objeto que representa a una persona con sus atributos. Las aficiones y las mascotas van en un array.
+
 ```json
 {
-    "menu": {
-        "id": "file",
-        "value": "File",
-        "popup": {
-            "menuitem": [
-                {
-                    "value": "New", "onclick": "CreateNewDoc()"
-                },{
-                    "value": "Open", "onclick": "OpenDoc()"
-                },{
-                    "value": "Close", "onclick": "CloseDoc()"
-                }
-            ]
-        }
-    }
+  "nombre": "Pepe", 
+  "apellidos": "Perez López", 
+  "aficiones": ["correr", "leer", "ver el GH Dúo sin volumen"], 
+  "mascotas" : [
+      {"nombre" : "Ataúlfo", "edad": 2, "especie" : "periquito"},
+      {"nombre" : "Membrilla", "edad": 3, "especie" : "gato"}
+  ]
 }
-```
+````
 
 ## YAML
-YAML es un formato de serialización de datos basado en texto, en los que las indentaciones funcionan con separador, al estilo de Python.
+YAML es un formato de serialización de datos basado en texto, en los que las indentaciones funcionan con separador, al estilo de Python. 
+
+* Es un estándar del IETF, mucho más rico que JSON.
+* En un fichero de YAML, habitualmenet con extensión .yml se definen parejas de atributos y valores o listas. 
+* Los objetos pueden tener atributos, que son identificadores asociados a valores. Los identificadores se escriben tal cual y pueden contener espacios, pero no ls numéricos. Ej: `nombre : arturo` `"año de nacimiento" : 1989"`
+* Los valores no tienen tipo definido
+   * Si los valores se agrupan formando un objeto, a su vez un **objeto**, entonces van indentados 
+   * Si el valor es un **array** o lista, entonces va entre corchetes con sus valores separados por comas. Ej: `"aficiones: ["correr", "leer", "ver el GH Dúo sin volumen"], pero ser recomienda que vayan cada uno en una línea, indentado y con un guión delante
+* Puede haber comentarios, precedidos de `#`
+* Para indentar se utilizan <span style="color:red">2 o 4 espacios. <strong>Nunca tabs</strong></span>.
+
 
 ```yaml
-nombre: pepe
-apellidos:
-   - perez
-   - lopez
-aficiones: [leer, correr]
-notas:
-   programacion: 5
-   lenguajes de marcas: 3
+nombre: Pepe
+apellidos: Perez López
+aficiones: [correr, leer, ver el GH Dúo sin volumen]
+mascotas:
+  -
+    nombre: Ataúlfo
+    edad: 2
+    especie: periquito
+  -
+    nombre: Membrilla
+    edad: 3
+    especie: gato
+
 ```
 
-```json
-{
-  "nombre": "pepe", 
-  "apellidos": ["perez", "lopez"], 
-  "aficiones": ["leer", "correr"], 
-  "notas": {
-    "programacion": 5, 
-    "lenguajes de marcas": 3
-  }
-}
-```

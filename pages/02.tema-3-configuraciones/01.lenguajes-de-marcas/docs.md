@@ -188,9 +188,16 @@ YAML es un formato de serialización de datos basado en texto, en los que las in
 
 
 ```yaml
+
 nombre: Pepe
 apellidos: Perez López
+# las aficiones son una lista
 aficiones: [correr, leer, ver el GH Dúo sin volumen]
+# Los colores favoritos también son una lista:
+colores favoritos:
+  - rojo
+  - amarrillo
+# Las mascotas también, pero una lista de objetos
 mascotas:
   -
     nombre: Ataúlfo

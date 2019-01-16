@@ -30,5 +30,11 @@ Para que el protocolo https funcione es necesario:
 ### La PKI
 La infraestructura de clave pública (Public Key Infrastructure) es un sistema estándar de emisión de certificados en condiciones de garantia global.  
 Se basa en:
-* Una serie de empresas llamadas **Autoridades de 
+* Una serie de empresas llamadas **Autoridades de Certificación** (CA), pertenecientes todas ellas al ITU, que garantizan la identidad de los sitios firmando los certificados que se ponen en los sitios web.
+* El protocolo TLS (o SSL), que es una capa adicional a otros protocolos, como http, formando el https. Pero también ftp tiene una versión segura llamada FTP/TLS (que no es lo mismo que SFTP).
+* El estándar de intercambio de certificados X.509, en el que las claves se guardan en ficheros con estructura estándar. **Los servidores deben guardar un certificado en formato estándar X.509**, que se descarga al cliente al principio de un transporte cifrado con TLS.  
+
+>>> Existen varios formatos de ficheros de certificados que corresponden con el estándar X.509.  
+>>> El formato **pem** y derivados son los habituales de apache. Lo vemos en ficheros con extensión **.pem, crt, key** y algunos otros. Es un fichero que contiene un único objeto criptográfico en formato de texto. Habitualmente, bien un certificado o bien una clave privada.
+>>> **.pkcs** es un formato que se utiliza habitualmente en servidores Java o Microsoft. Más compacto, y su origen no está en el ITU, pero tiene la misma funcionalidad.
 

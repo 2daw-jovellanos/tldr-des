@@ -25,7 +25,11 @@ Es decir **https = http + tls**
 ### Requisitos
 Para que el protocolo https funcione es necesario:
 * Que cliente y servidor estén preparados para TLS con varios algoritmos de cifrado cada uno. Todos los servidores y clientes modernos lo están.
-* Que en el servidor se active https, y para cada host virtual securizado se instale un **certificado**, que contendrá los datos de la identidad del sitio, una clave pública asimétrica para iniciar la negociación segura y una firma digital que verifique la validez del certificado.
+* Que en el servidor se active https, y para cada host virtual securizado se instale un **certificado**, que contendrá los datos de la identidad del sitio, una clave pública 
+* Que el cliente tenga instaladas las claves públicas de las CA que certifican la identidad de los sitios a los que nos conectamos. Con esas claves públicas se comprueba la firma del certificado de los sitios.
+    * Firefox de Windows y linux tiene preinstaladas las claves públicas de las principales CA.
+    * Chrome, Opera, Safari y derivados utilizan el repositorio de claves del sistema operativo, donde también están las principales CA.
+* asimétrica para iniciar la negociación segura y una firma digital que verifique la validez del certificado.
 
 ### La PKI
 La infraestructura de clave pública (Public Key Infrastructure) es un sistema estándar de emisión de certificados en condiciones de garantia global.  

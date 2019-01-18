@@ -1,6 +1,6 @@
 ---
 title: 'Navegadores y herramientas de desarrollador'
-published: false
+published: true
 taxonomy:
     category:
         - docs

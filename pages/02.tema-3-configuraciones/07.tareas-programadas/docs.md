@@ -23,7 +23,7 @@ Crontab es la manera mas sencilla de administrar tareas de cron en sistemas mult
 Ejecutamos la edición del crontab con `crontab -e`, en algunas distribuciones como ubuntu nos da la opcion de elegir el editor de textos que deseemos, en las demás se suele utilizar el editor vi. El archivo crontab será de este estilo:
 
 ```
-# m h dom mon dow command
+m h dom mon dow command
 ```
 
 donde:
@@ -39,7 +39,7 @@ Ejemplos:
 * `15 22 * * * /home/usuario/scripts/actualizar.sh` Ejecutará el script actualizar.sh a las 22:15. todos los días
 * `00 10 * * 0 apt-get -y update` Ejecutará una actualización todos los domingos a las 10:00
 * `45 10 * * sun apt-get -y update` Usuario root ejecutará una actualización todos los domingos (sun) a las 10:45
-* `30 7 20 11 * /home/usuario/scripts/actualizar.sh` El día 20 de noviembre a las 7:30, con las credenciales de `usuario` 
+* `30 7 20 11 * /home/usuario/scripts/actualizar.sh` El día 20 de noviembre a las 7:30
 * `30 7 11 11 sun /home/usuario/scripts/pastel_con_velitas.sh` El día 11 de noviembre a las 7:30 a.m. y que sea domingo.
 * `1 * * * * /home/usuario/scripts/molestorecordatorio.sh` Cada minuto 1
 

@@ -7,14 +7,18 @@ visible: true
 ---
 
 ### Objetivos
-La securización de un sitio web tiene dos objetivos:
-1. Obtener un cifrado de la comunicación de extremo a extremo, es decir, entre el cliente y el servidor, para mantener la privacidad de la comunicación.
-2. Asegurar la identidad del sitio web
+La securización de un sitio web tiene varios objetivos:
+* Obtener un cifrado de la comunicación de extremo a extremo, es decir, entre el cliente y el servidor, para mantener:
+	*  la **privacidad** de la información: que un tercero no pueda tener acceso a la información mientras viaja por la red
+	*  la **integridad** de la comunicación: que un tercero no pueda interceptar la comunicación e incluso falsearla o desviarla [(man in the middle)](https://es.wikipedia.org/wiki/Ataque_de_intermediario)
+* Asegurar la **identidad** del sitio web, bien mediante la garantia de que el dominio es veraz, o incluso mediante una verificación extendida, que la empresa que hay detrás también lo es.
 
 ### Protocolos
 Se basa en añadir una capa de cifrado y verificacion basada en protocolos estándar del IETF:
 * El protocolo **TLS** (Transport layer security)
 * O bien su antecesor **SSL** (Secure Socket Layer)
+
+Aunque SSL ha sido considerado obsoleto y el estándar actual es TLS1.3 (de 2018), el nombre de SSL se sigue utilizando como sinonimo.
 
 Ambos protocolos se implementan en **cliente** y **servidor**, NO EN EL SISTEMA OPERATIVO, como TCP, UDP, o IP.
 Se basan en estándares de intercambio de claves y firmas digitales llamado **X509**, que es un estándar de ITU.

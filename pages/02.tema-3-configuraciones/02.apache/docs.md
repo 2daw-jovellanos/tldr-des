@@ -1,11 +1,10 @@
 ---
 title: Apache
 taxonomy:
-    category: docs
+    category:
+        - docs
 visible: true
 ---
-
->>>> Incompleto
 
 Apache deriva del servidor web original de la NCSA. 
 La versión actual es la 2.4

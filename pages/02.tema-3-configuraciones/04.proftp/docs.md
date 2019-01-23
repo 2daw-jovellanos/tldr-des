@@ -5,7 +5,7 @@ taxonomy:
 visible: true
 ---
 
-**proftpd** es un popular servidor web con licencia GPL, instalable a través del gestor de paquetes _apt_ desde el repositorio de _ubuntu_.  
+**proftpd** es un popular servidor del protocolo FTP con licencia GPL, instalable a través del gestor de paquetes _apt_ desde el repositorio de _ubuntu_.  
 web: [proftpd.org](http://www.proftpd.org/)
 
 ### Instalación:

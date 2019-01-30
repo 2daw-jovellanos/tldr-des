@@ -28,12 +28,17 @@ La experiencia de usuario como disciplina se aplica tradicionalmente a los siste
 
 Por otro lado, el diseño de la **interfaz de usuario (UI - User Interface)** es una parte de la UX, en la que se diseña el esquema general de la interacción del usuario, y tiene ya una relación directa con las labores de diseño, tanto por el equipo informático como por el equipo artrístico de maquetación.
 
-https://www.youtube.com/watch?v=lYWOzxVCTao
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lYWOzxVCTao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Software
 
+Hay bastantes aplicaciones que nos ayudan con el diseño de wireframes.
 
+* Una de las más populares es [balsamiq](https://balsamiq.com/), que es _comercial_, y permite una prueba gratuita, tanto de su versión de escritorio como de su versión web.
+* También es muy conocida [Adobe XD](www.adobe.com/ES/XD)
+* Si no se necesita demasiada exigencia, hay aplicaciones sencillas como [wireframe.cc](https://wireframe.cc/)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/STlEdjqN4dI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CtgBSMCooCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 

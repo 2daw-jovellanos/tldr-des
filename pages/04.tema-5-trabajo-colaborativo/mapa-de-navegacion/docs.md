@@ -15,7 +15,7 @@ Principales funciones de los mapas de navegación.
 * Permiten la integración de objetivos claves para su desarrollo, como el representar de forma esquemática un determinado conocimiento
 * Facilitan la entrega de información de forma rápida y directa.
 
-Si vamos a crear un mapa de navegación, es importante llevar a cabo los siguientes pasos.
+Si vamos a crear un mapa de navegación, es importante llevar a cabo los siguientes pasos:
 
 * Lo principal es generar una definición, que es aquí donde debemos lograr definir los contenidos de nuestra plataforma, el cual debemos ordenar y agrupar los contenidos identificándolos por secciones.
 * Por otro lado la estructura, en la cual en esta etapa corresponde al árbol de contenidos con sus diferentes niveles de jerarquización, de esta forma lograremos navegar en las diferentes categorías.

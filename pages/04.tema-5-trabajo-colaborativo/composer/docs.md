@@ -1,5 +1,6 @@
 ---
 title: Composer
+media_order: 'wheelbarrel-with-tilde-caret-white-bg-w1000[1].jpg'
 taxonomy:
     category:
         - docs
@@ -28,4 +29,12 @@ Nombre del paquete, cadena, en el formato `vendor/package_name`
 #### description
 Una breve descripción del proyecto, cadena.
 #### version
-La versión en la que se encuentra el proyecto. 
+La versión en la que se encuentra el proyecto. En el sistema estándar de versiones se utilizan hasta tres números separados por puntos.
+![Standard version system](wheelbarrel-with-tilde-caret-white-bg-w1000%5B1%5D.jpg)
+Se puede añadir un sufijo que indica la **estabilidad** de la versión, seguido opcionalmente de un número. De menor a mayor estabilidad:
+* `-dev` El proyecto está en desarrollo. Mínima fiabilidad.
+* `-patch` (`-p`) El proyecto está en proceso de solventar problemas fundamentales de estabildad, funcionalidad o seguridad.
+* `-alpha` (`-a`) Inestable, pero se pueden probar funcionalidades, al menos de manera parcial.
+* `-beta` (`-b`) Inestable, pero se supone que están todas las funcionalidades, y que se pueden realizar pruebas de aceptacion, estabilidad, rendimiento, etc.
+* `-RC` Release candidate: Versión que se supone estable, y se realizan todas las pruebas necesarias antes de considerarla formalmente versión estable.
+Ej: `1.2.9-alpha3`, `1.0-RC`

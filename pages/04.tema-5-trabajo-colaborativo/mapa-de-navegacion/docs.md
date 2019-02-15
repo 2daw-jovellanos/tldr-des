@@ -9,7 +9,8 @@ visible: true
 ## ¿Que son los mapas de Navegación?
 
 Los mapas de navegación son esquemas de organización de la información de una estructura web, la cual nos indica las bases principales de nuestra plataforma, expresa las relaciones de jerarquía y secuencia, también permite elaborar escenarios de comportamientos de los usuarios, estos son representados de forma textual, gráfica o ambas combinadas.
-Principales funciones de los mapas de navegación.
+
+Principales funciones de los mapas de navegación:
 
 * Permiten lograr una navegación preliminar donde se pueda orientar a los usuarios en los recorridos que llevaran acabo al momento de utilizarla, de esta forma se visualizaran los enlaces a los diferentes nodos que esta pueda tener.
 * Permiten la integración de objetivos claves para su desarrollo, como el representar de forma esquemática un determinado conocimiento
@@ -27,7 +28,6 @@ La navegación lineal permite un flujo de la información mas estable, es muy ú
 
 ### Navegación lineal en estrella
 La navegación en estrella se basa es igual que el sistema explicado anteriormente, a diferencia que este va y vuelve hacia el inicio.
-Navegación jerárquica
 
 ### Navegación jerárquica o de árbol. 
 Esta estructura comienza con una página principal o raíz , se presentan varias opciones que permite ir visualizando páginas más especificas. El contenido se desarrolla en forma ramificada pudiendo visitar cada una de las secciones por separado.

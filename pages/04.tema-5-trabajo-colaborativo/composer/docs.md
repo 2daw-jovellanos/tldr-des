@@ -24,24 +24,24 @@ Hay dos tipos de dependencias:
 * Cuando se han instalado las dependencias, composer anota las versiones instaladas en un fichero llamado `composer.lock`.
 
 ## el formato de composer.json
-El fichero describe un objeto json, con propiedades. Cada propiedad tiene su propia estructura. Hay muchas apartados que se pueden incluir en composer.json.  
+El fichero describe un objeto json, con propiedades. Cada clave tiene su propia estructura. Hay muchas apartados que se pueden incluir como claves en el objeto de composer.json.  
 Más: [esquema completo de composer.json](https://getcomposer.org/doc/04-schema.md)
 
 #### name
-Nombre del paquete, cadena, en el formato `vendor/package_name`
+Nombre del paquete (una cadena) en el formato _vendor/package_name_.
 ```json
    "name": "despliegue/ejemplo-composer",
 ```
 
 #### description
-Una breve descripción del proyecto, cadena.
+Una breve descripción del proyecto (cadena)
 ```json
    "description": "Un proyecto de ejemplo para probar composer",
 ```
 #### type
 El tipo de proyecto que estamos haciendo. Cadena. Ej: `library`, `project`
 ```json
-   "type": "library, project",
+   "type": "project",
 ```
 #### license
 La [licencia](https://spdx.org/licenses/) del proyecto. Cadena.
@@ -50,7 +50,7 @@ La [licencia](https://spdx.org/licenses/) del proyecto. Cadena.
 ```
 
 #### minimum-stability
-Cadena. La estabilidad mínima que se requiere para las dependencias: `dev`, `alpha`, `beta`, `rc` o `stable`.
+Cadena. La estabilidad mínima que se requiere para las dependencias: `dev`, `alpha`, `beta`, `rc` o `stable`. ([Ver versiones](#versiones))
 ```json
 "minimum-stability": "RC"
 ```

@@ -19,12 +19,13 @@ Mas: [documentación de composer](https://getcomposer.org/doc/)
 Hay dos tipos de dependencias:
     * dependencias (a secas): son necesarias para el despliegue del proyecto y su explotación
     * dependencias de desarrollo (**devdependencies**): son necesarias solo para desarrolladores: suelen ser herramientas, tales como librerias de test, transpiladores, minificadores y similares.
-* Tambien se pueden descargar dependencias que no sean del backend, sino del front, tales como frameworks de css (bootstrap, font-awesome etc) o de javascript (jquery, etc)
+* Tambien se pueden descargar dependencias que no sean del backend, sino del front, tales como frameworks de css (bootstrap, font-awesome, etc) o de javascript (jquery, etc)
 * La carpeta vendor debería ser ignorada por git o cualquier otro <abbr title="source code manager">scm</abbr>. En el caso de git, añadirla a `.gitignore`
 * Cuando se han instalado las dependencias, composer anota las versiones instaladas en un fichero llamado `composer.lock`.
 
 ## el formato de composer.json
-El fichero describe un objeto json, con propiedades. Cada propiedad tiene su propia estructura. Hay muchas apartados que se pueden incluir en composer.json. [esquema completo de composer.json](https://getcomposer.org/doc/04-schema.md)
+El fichero describe un objeto json, con propiedades. Cada propiedad tiene su propia estructura. Hay muchas apartados que se pueden incluir en composer.json.  
+Más: [esquema completo de composer.json](https://getcomposer.org/doc/04-schema.md)
 
 #### name
 Nombre del paquete, cadena, en el formato `vendor/package_name`

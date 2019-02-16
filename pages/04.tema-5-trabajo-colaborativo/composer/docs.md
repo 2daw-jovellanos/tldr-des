@@ -56,7 +56,7 @@ Cadena. La estabilidad mínima que se requiere para las dependencias: `dev`, `al
 ```
 
 #### require
-Un objeto, que contiene las dependencias el proyecto. Cada clave de este objeto es el idenficador de una dependencia en el formato `vendor/name`. Cada valor describe la versión aceptable para la dependencia. [(ver versiones)](Versiones)
+Un objeto, que contiene las dependencias el proyecto. Cada clave de este objeto es el idenficador de una dependencia en el formato `vendor/name`. Cada valor describe la versión aceptable para la dependencia. [(ver versiones)](#versiones)
 ```json
     "require": {
         "noahbuscher/macaw": "dev-master",

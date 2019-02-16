@@ -57,10 +57,35 @@ Cadena. La estabilidad mínima que se requiere para las dependencias: `dev`, `al
 ```
 
 #### require
-Un objeto, que contiene las dependencias el proyecto. Cada clave de este objeto es el idenficador de una dependencia en el formato `vendor/name`
+Un objeto, que contiene las dependencias el proyecto. Cada clave de este objeto es el idenficador de una dependencia en el formato `vendor/name`. Cada valor describe la versión aceptable para la dependencia. [(ver versiones)](Versiones)
+```json
+    "require": {
+        "noahbuscher/macaw": "dev-master",
+        "monolog/monolog": "^2.0"
+    },
+```
 
-#### version
-La versión en la que se encuentra el proyecto. En el sistema estándar de versiones se utilizan hasta tres números separados por puntos.
+#### require-dev
+La misma estructura que require, pero para dependencias que sólo son necesarias durante el desarrollo. Ej.: frameworks de pruebas, minificadores, transpiladores, etc.
+```json
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
+```
+#### authors
+Un array con objetos que describen los autores del proyecto. Cada objeto tiene dos claves: `name` y `email`.
+```json
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+        }
+    ],
+```
+
+## versiones
+
+En el sistema estándar de etiquetado de versiones se utilizan hasta tres números separados por puntos:
 ![Standard version system](wheelbarrel-with-tilde-caret-white-bg-w1000%5B1%5D.jpg)
 Se puede añadir un sufijo que indica la **estabilidad** de la versión, seguido opcionalmente de un número. De menor a mayor estabilidad:
 * `-dev` El proyecto está en desarrollo. Mínima fiabilidad.
@@ -69,3 +94,12 @@ Se puede añadir un sufijo que indica la **estabilidad** de la versión, seguido
 * `-beta` (`-b`) Inestable, pero se supone que están todas las funcionalidades, y que se pueden realizar pruebas de aceptacion, estabilidad, rendimiento, etc.
 * `-RC` Release candidate: Versión que se supone estable, y se realizan todas las pruebas necesarias antes de considerarla formalmente versión estable.
 Ej: `1.2.9-alpha3`, `1.0-RC`
+
+Hay muchas formas de especificar la versión de una dependencia en composer. Algunas de las más habituales:
+* Exactamente. Ej: `1.0.3`: exactamente la versión etiquetada 1.0.3
+* Con comparadores: `>=1.0` La 1.0 o cualquiera superior; `>=1.0 <2.0` Mayor o igual que 1.0 y menor que 2.0; `>=1.0 <1.1 || >=1.2 `mayor o igual que 1.0 y menor que 1.1 o mayor o igual que 1.2.
+* Rango con guiones: `1.0 - 2.0` Cualquier versión entre 1.0 y 2.0 ambas inclusive. Se incluyen también todas las versiónes 2.0. Ej. 2.0.45 también estaría incluida.
+* Virgulilla: permite que crezca el último numero especificado. Ej: `~1.5` A partir de la 1.5 y <2.0; Ej, `~1.5.22` A partir de la 1.5.22 y <1.6
+* Acento circunflejo: Mantiene la compatibilidad de la versión mayor. Ej: `~1.2.4` permite todas las versiones partir de 1.2.4 y <2.0. (Excepción: en las versiones anteriores a la 1, es decir, si la versión mayor es 0, sólo permite que incremente el tercer número. Ej: `~0.3` permite versiones >=0.3.0 y <0.4.0
+* Rama de scm: Se utiliza `dev-` seguido del nombre de la rama. Ej: `dev-master` es la rama master.
+

@@ -24,6 +24,7 @@ Hay dos tipos de dependencias:
     * dependencias de desarrollo (**devdependencies**): son necesarias solo para desarrolladores: suelen ser herramientas, tales como librerias de test, transpiladores, minificadores y similares.
 * Tambien se pueden descargar dependencias que no sean del backend, sino del front, tales como frameworks de css (bootstrap, font-awesome etc) o de javascript (jquery, etc)
 * La carpeta vendor debería ser ignorada por git o cualquier otro <abbr title="source code manager">scm</abbr>. En el caso de git, añadirla a `.gitignore`
+* Cuando se han instalado las dependencias, composer anota las versiones instaladas en un fichero llamado `composer.lock`.
 
 ## el formato de composer.json
 El fichero describe un objeto json, con propiedades. Cada propiedad tiene su propia estructura. Hay muchas apartados que se pueden incluir en composer.json. [esquema completo de composer.json](https://getcomposer.org/doc/04-schema.md)
@@ -102,4 +103,20 @@ Hay muchas formas de especificar la versión de una dependencia en composer. Alg
 * Virgulilla: permite que crezca el último numero especificado. Ej: `~1.5` A partir de la 1.5 y <2.0; Ej, `~1.5.22` A partir de la 1.5.22 y <1.6
 * Acento circunflejo: Mantiene la compatibilidad de la versión mayor. Ej: `~1.2.4` permite todas las versiones partir de 1.2.4 y <2.0. (Excepción: en las versiones anteriores a la 1, es decir, si la versión mayor es 0, sólo permite que incremente el tercer número. Ej: `~0.3` permite versiones >=0.3.0 y <0.4.0
 * Rama de scm: Se utiliza `dev-` seguido del nombre de la rama. Ej: `dev-master` es la rama master.
+
+## comandos usuales
+
+* **composer init** → Compone un composer.json básico interactivamente
+* **composer install** → instala las dependencias especificadas en `composer.json`. Se tiene en cuenta el fichero `composer.lock`:
+    * Si no existe, se descargan las últimas versiones de las dependencias que cumplan las restricciones de versión, y se anotan en composer.lock
+    * Si existe, se comprueban las versiones anotadas composer.lock y si no están instaladas, se reinstalan, y también se instalan las dependencias nuevas que no estuvieran anotadas en composer.lock.
+* **composer install --no-dev** → No instala las dependencias de desarrollo
+* **composer require _vendor/name_** → añade una dependencia
+* **composer require -dev _vendor/name_** → añade una dependencia de desarrollo
+* **composer remove _vendor/name_** → Elimina una dependencia de desarrollo
+* **composer update** → Busca y descarga actualizaciones de las dependencias.
+
+
+
+
 

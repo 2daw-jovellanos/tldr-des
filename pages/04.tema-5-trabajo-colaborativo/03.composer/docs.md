@@ -112,7 +112,7 @@ Más: [Versions and constraints](https://getcomposer.org/doc/articles/versions.m
 * **composer init** → Compone un composer.json básico interactivamente
 * **composer install** → instala las dependencias especificadas en `composer.json`. Se tiene en cuenta el fichero `composer.lock`:
     * Si no existe, se descargan las últimas versiones de las dependencias que cumplan las restricciones de versión, y se anotan en composer.lock
-    * Si existe, se comprueban las versiones anotadas composer.lock y si no están instaladas, se reinstalan, y también se instalan las dependencias nuevas que no estuvieran anotadas en composer.lock.
+    * Si existe, se comprueban las versiones anotadas composer.lock y si no están instaladas, se reinstalan, y también se instalan las dependencias nuevas que no estuvieran anotadas en composer.lock.  
 El comando install no busca versiones actualizadas. Si tiene que reinstalar, instala las versiones anotadas en composer.lock. Compartir composer.lock con el equipo de desarrollo hace que se compartan las mismas versiones instaladas.
 * **composer install --no-dev** → No instala las dependencias de desarrollo
 * **composer require _vendor/name_** → añade una dependencia

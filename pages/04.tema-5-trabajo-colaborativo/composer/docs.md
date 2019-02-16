@@ -101,6 +101,8 @@ Hay muchas formas de especificar la versión de una dependencia en composer. Alg
 * Acento circunflejo: Mantiene la compatibilidad de la versión mayor. Ej: `~1.2.4` permite todas las versiones partir de 1.2.4 y <2.0. (Excepción: en las versiones anteriores a la 1, es decir, si la versión mayor es 0, sólo permite que incremente el tercer número. Ej: `~0.3` permite versiones >=0.3.0 y <0.4.0
 * Rama de scm: Se utiliza `dev-` seguido del nombre de la rama. Ej: `dev-master` es la rama master.
 
+Más: [Versions and constraints](https://getcomposer.org/doc/articles/versions.md)
+
 ## comandos usuales
 
 * **composer init** → Compone un composer.json básico interactivamente
@@ -113,7 +115,7 @@ Hay muchas formas de especificar la versión de una dependencia en composer. Alg
 * **composer remove _vendor/name_** → Elimina una dependencia de desarrollo
 * **composer update** → Busca y descarga actualizaciones de las dependencias.
 
-
+Más: [cli/commands](https://getcomposer.org/doc/03-cli.md)
 
 
 

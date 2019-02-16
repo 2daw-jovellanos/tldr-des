@@ -1,6 +1,6 @@
 ---
 title: Composer
-media_order: 'wheelbarrel-with-tilde-caret-white-bg-w1000[1].jpg'
+media_order: '1_T0mhMbVbXzdrcH6R9BuevQ[1].png'
 taxonomy:
     category:
         - docs
@@ -85,10 +85,13 @@ Un array con objetos que describen los autores del proyecto. Cada objeto tiene d
 ## versiones
 
 En el sistema estándar de etiquetado de versiones se utilizan hasta tres números separados por puntos:
-![Standard version system](wheelbarrel-with-tilde-caret-white-bg-w1000%5B1%5D.jpg)
+![Standard version system](1_T0mhMbVbXzdrcH6R9BuevQ%5B1%5D.png)
+* La versión mayor cambia cuando hay modificaciones que rompen la compatibilidad
+* La versión menor cambia cuando se introducen mejoras que no rompen la compatibilidad
+* La versión de patch cambia cuando se hacen modificaciones que arreglan mal funcionamiento o problemas de seguridad.
+
 Se puede añadir un sufijo que indica la **estabilidad** de la versión, seguido opcionalmente de un número. De menor a mayor estabilidad:
 * `-dev` El proyecto está en desarrollo. Mínima fiabilidad.
-* `-patch` (`-p`) El proyecto está en proceso de solventar problemas fundamentales de estabildad, funcionalidad o seguridad.
 * `-alpha` (`-a`) Inestable, pero se pueden probar funcionalidades, al menos de manera parcial.
 * `-beta` (`-b`) Inestable, pero se supone que están todas las funcionalidades, y que se pueden realizar pruebas de aceptacion, estabilidad, rendimiento, etc.
 * `-RC` Release candidate: Versión que se supone estable, y se realizan todas las pruebas necesarias antes de considerarla formalmente versión estable.

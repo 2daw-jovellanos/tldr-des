@@ -99,7 +99,7 @@ Hay muchas formas de especificar la versión de una dependencia en composer. Alg
 * Con comparadores: `>=1.0` La 1.0 o cualquiera superior; `>=1.0 <2.0` Mayor o igual que 1.0 y menor que 2.0; `>=1.0 <1.1 || >=1.2 `mayor o igual que 1.0 y menor que 1.1 o mayor o igual que 1.2.
 * Rango con guiones: `1.0 - 2.0` Cualquier versión entre 1.0 y 2.0 ambas inclusive. Se incluyen también todas las versiónes 2.0. Ej. 2.0.45 también estaría incluida.
 * Virgulilla: permite que crezca el último numero especificado. Ej: `~1.5` A partir de la 1.5 y <2.0; Ej, `~1.5.22` A partir de la 1.5.22 y <1.6
-* Acento circunflejo: Mantiene la compatibilidad de la versión mayor. Ej: `~1.2.4` permite todas las versiones partir de 1.2.4 y <2.0. (Excepción: en las versiones anteriores a la 1, es decir, si la versión mayor es 0, sólo permite que incremente el tercer número. Ej: `~0.3` permite versiones >=0.3.0 y <0.4.0
+* Acento circunflejo: Mantiene la compatibilidad de la versión mayor. Ej: `^1.2.4` permite todas las versiones partir de 1.2.4 y <2.0. (Excepción: en las versiones anteriores a la 1, es decir, si la versión mayor es 0, sólo permite que incremente el tercer número. Ej: `^0.3` permite versiones >=0.3.0 y <0.4.0. 
 * Rama de scm: Se utiliza `dev-` seguido del nombre de la rama. Ej: `dev-master` es la rama master.
 
 Más: [Versions and constraints](https://getcomposer.org/doc/articles/versions.md)

@@ -7,9 +7,6 @@ taxonomy:
 visible: true
 ---
 
->>>> En proceso de redacción
-
-
 [Composer](https://getcomposer.org) es el gestor de dependencias vinculado a php. Su principal fuente es el repositorio [packagist](https://packagist.org/)
 Mas: [documentación de composer](https://getcomposer.org/doc/)
 

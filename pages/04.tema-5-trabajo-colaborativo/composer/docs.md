@@ -7,7 +7,7 @@ taxonomy:
 visible: true
 ---
 
-[Composer](https://getcomposer.org) es el gestor de dependencias vinculado a php. Su principal fuente es el repositorio [packagist](https://packagist.org/)  
+[TOC][Composer](https://getcomposer.org) es el gestor de dependencias vinculado a php. Su principal fuente es el repositorio [packagist](https://packagist.org/)  
 Mas: [documentación de composer](https://getcomposer.org/doc/)
 
 * Cada proyecto que use composer debe tener un fichero llamado `composer.json` que describe el proyecto y sus dependencias en la raíz de la carpeta del proyecto.
